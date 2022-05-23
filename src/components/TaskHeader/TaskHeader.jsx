@@ -1,17 +1,22 @@
 import React from "react";
 import styles from "./taskHeader.module.css";
 
-const TaskHeader = () => {
-  // sample values to be replaced
-  let totalTask = 0;
-  let unCompletedTask = 0;
+const TaskHeader = ({todo,data1}) => {
+  let [totalTask,settotalTask] =React.useState(todo.length+data1.length);
+  let [unCompletedTask,setunCompletedTask] = React.useState("0");
 
-  // NOTE: do not delete `data-cy` key value pair
   return (
-    <div data-cy="task-header" className={styles.taskHeader}>
-      <b data-cy="header-remaining-task">{unCompletedTask}</b>
+    <div className={styles.header}>
+      TODO List    
+      <div data-cy="task-header" className={styles.taskHeader}>
+      You have <span>   </span>
+      <b data-cy="header-remaining-task">{unCompletedTask}</b>   
+         <span>  </span>  of <span>   </span>
       <b data-cy="header-total-task">{totalTask}</b>
+      <span>   </span>  tasks remaining
     </div>
+    </div>
+
   );
 };
 

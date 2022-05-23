@@ -1,7 +1,11 @@
-.tasks {
-  /* sample */
-}
 
-.empty {
-  /* sample */
+
+.empty>div {
+ margin-top: 20px;
+ height: 300px;
+ overflow: scroll;
+
+}
+.AA{
+  margin-top: 20px;
 }
